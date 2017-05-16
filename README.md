@@ -1,6 +1,6 @@
 # graystatus
 
-Prompt theme for fish shell.
+Prompt theme for [fish shell](http://fishshell.com).
 
 * modest prompt
 * deference to contents
