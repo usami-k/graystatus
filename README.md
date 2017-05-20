@@ -11,9 +11,15 @@ Prompt theme for [fish shell](http://fishshell.com).
 
 ## Install
 
-Use [fisherman](https://fisherman.github.io) :
+If you use [fisherman](https://fisherman.github.io) :
 
 ```
 fisher usami-k/graystatus
+```
+
+If you use [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) :
+
+```
+omf install graystatus
 ```
 
