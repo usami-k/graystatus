@@ -28,6 +28,7 @@ function prompt_rbenv
 end
 
 function fish_prompt
+    printf "\033[K"
     set_color brblack
     echo -n '['(prompt_pwd)']'
     echo -n (__fish_git_prompt)
