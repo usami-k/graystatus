@@ -28,7 +28,12 @@ function prompt_rbenv
 end
 
 function fish_prompt
+    set -l last_status $status
     printf "\033[K"
+    if test $last_status -ne 0
+        set_color red
+        echo "exit status $last_status"
+    end
     set_color brblack
     echo -n '['(prompt_pwd)']'
     echo -n (__fish_git_prompt)
