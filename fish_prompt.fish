@@ -38,7 +38,8 @@ function fish_prompt
     echo -n '['(prompt_pwd)']'
     echo -n (__fish_git_prompt)
     echo
-    echo -n '$ '
+    echo -n (string repeat -n $SHLVL '$')
+    echo -n ' '
     set_color normal
 end
 
