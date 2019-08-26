@@ -23,6 +23,15 @@ If you use [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) :
 omf install graystatus
 ```
 
+## Configuration
+
+To configure, you can use environment variables.
+
+* `GRAYSTATUS_COLOR_PROMPT` : prompt color (default: brblack)
+* `GRAYSTATUS_COLOR_STATUS` : exit status color (default: red)
+
+The color value is passed to [set_color](https://fishshell.com/docs/current/commands.html#set_color) command.
+
 ## License
 
 Copyright 2017 USAMI Kosuke
