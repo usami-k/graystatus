@@ -11,7 +11,7 @@ Prompt theme for [fish shell](http://fishshell.com).
 
 ## Install
 
-If you use [fisherman](https://fisherman.github.io) :
+If you use [fisher](https://github.com/jorgebucaran/fisher) :
 
 ```
 fisher usami-k/graystatus
