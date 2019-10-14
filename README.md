@@ -14,7 +14,7 @@ Prompt theme for [fish shell](http://fishshell.com).
 If you use [fisher](https://github.com/jorgebucaran/fisher) :
 
 ```
-fisher usami-k/graystatus
+fisher add usami-k/graystatus
 ```
 
 If you use [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) :
