@@ -8,6 +8,7 @@ set __fish_git_prompt_describe_style 'default'
 
 set --query GRAYSTATUS_COLOR_PROMPT; or set GRAYSTATUS_COLOR_PROMPT brblack
 set --query GRAYSTATUS_COLOR_STATUS; or set GRAYSTATUS_COLOR_STATUS red
+set --query GRAYSTATUS_SHOW_PROMPT; or set GRAYSTATUS_SHOW_PROMPT 0
 
 function prompt_rbenv
     if not type -q 'rbenv'
@@ -41,8 +42,10 @@ function fish_prompt
     echo -n '['(prompt_pwd)']'
     echo -n (__fish_git_prompt)
     echo
-    echo -n (string repeat -n $SHLVL '$')
-    echo -n ' '
+    if test $GRAYSTATUS_SHOW_PROMPT -ne 0
+        echo -n (string repeat -n $SHLVL '$')
+        echo -n ' '
+    end
     set_color normal
 end
 
