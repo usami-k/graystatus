@@ -8,7 +8,7 @@ set __fish_git_prompt_describe_style 'default'
 
 set --query GRAYSTATUS_COLOR_PROMPT; or set GRAYSTATUS_COLOR_PROMPT brblack
 set --query GRAYSTATUS_COLOR_STATUS; or set GRAYSTATUS_COLOR_STATUS red
-set --query GRAYSTATUS_SHOW_PROMPT; or set GRAYSTATUS_SHOW_PROMPT 0
+set --query GRAYSTATUS_SHOW_PROMPT; or set GRAYSTATUS_SHOW_PROMPT 1
 
 function prompt_rbenv
     if not type -q 'rbenv'
