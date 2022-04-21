@@ -8,6 +8,7 @@ set __fish_git_prompt_describe_style 'default'
 
 set --query GRAYSTATUS_COLOR_PROMPT; or set GRAYSTATUS_COLOR_PROMPT brblack
 set --query GRAYSTATUS_COLOR_STATUS; or set GRAYSTATUS_COLOR_STATUS red
+set --query GRAYSTATUS_SHOW_STATUS; or set GRAYSTATUS_SHOW_STATUS 1
 set --query GRAYSTATUS_SHOW_PROMPT; or set GRAYSTATUS_SHOW_PROMPT 1
 
 function prompt_rbenv
@@ -34,9 +35,11 @@ end
 function fish_prompt
     set -l last_status $status
     printf "\033[K"
-    if test $last_status -ne 0
-        set_color $GRAYSTATUS_COLOR_STATUS
-        echo "exit status $last_status"
+    if test $GRAYSTATUS_SHOW_STATUS -ne 0
+        if test $last_status -ne 0
+            set_color $GRAYSTATUS_COLOR_STATUS
+            echo "exit status $last_status"
+        end
     end
     set_color $GRAYSTATUS_COLOR_PROMPT
     echo -n '['(prompt_pwd)']'
