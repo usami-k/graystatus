@@ -10,6 +10,7 @@ set --query GRAYSTATUS_COLOR_PROMPT; or set GRAYSTATUS_COLOR_PROMPT brblack
 set --query GRAYSTATUS_COLOR_STATUS; or set GRAYSTATUS_COLOR_STATUS red
 set --query GRAYSTATUS_SHOW_STATUS; or set GRAYSTATUS_SHOW_STATUS 1
 set --query GRAYSTATUS_SHOW_PROMPT; or set GRAYSTATUS_SHOW_PROMPT 1
+set --query GRAYSTATUS_SHOW_RIGHT_PROMPT; or set GRAYSTATUS_SHOW_RIGHT_PROMPT 1
 
 function prompt_rbenv
     if not type -q 'rbenv'
@@ -53,7 +54,9 @@ function fish_prompt
 end
 
 function fish_right_prompt
-    set_color $GRAYSTATUS_COLOR_PROMPT
-    echo -n (prompt_rbenv)
-    set_color normal
+    if test $GRAYSTATUS_SHOW_RIGHT_PROMPT -ne 0
+        set_color $GRAYSTATUS_COLOR_PROMPT
+        echo -n (prompt_rbenv)
+        set_color normal
+    end
 end
